@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-dark: #0f172a;
+  --color-dark-secondary: #1e293b;
+  --color-dark-tertiary: #334155;
+  --color-success: #10b981;
+  --color-danger: #ef4444;
+  --color-warning: #f59e0b;
+  --color-info: #3b82f6;
+}
+
+body {
+  @apply bg-dark text-gray-100;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-dark-tertiary rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
+
+/* Card component */
+.card {
+  @apply bg-dark-secondary border border-dark-tertiary rounded-lg p-4;
+}
+
+/* Button variants */
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded font-semibold transition;
+}
+
+.btn-secondary {
+  @apply bg-dark-tertiary hover:bg-gray-700 text-white px-4 py-2 rounded font-semibold transition;
+}
+
+.btn-danger {
+  @apply bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded font-semibold transition;
+}
+
+.btn-success {
+  @apply bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded font-semibold transition;
+}
+
+/* Input styling */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+  @apply bg-dark-tertiary border border-dark-tertiary rounded px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition;
+}
+
+/* Table styling */
+table {
+  @apply w-full text-sm;
+}
+
+thead {
+  @apply bg-dark-tertiary border-b border-dark-tertiary;
+}
+
+thead th {
+  @apply px-4 py-3 text-left font-semibold text-gray-300;
+}
+
+tbody td {
+  @apply px-4 py-3 border-b border-dark-tertiary;
+}
+
+tbody tr:hover {
+  @apply bg-dark-secondary transition;
+}
