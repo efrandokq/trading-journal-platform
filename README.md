@@ -1,101 +1,194 @@
-# 🏰 Empire Noble North - Trading Journal Platform
+# 🏛️ Empire Noble North - Trading Journal Platform
 
-Plateforme professionnelle de journal de trading intégrée avec **cTrader Open API**.
+Plateforme professionnelle de journal de trading intégrée avec **cTrader Open API**. Synchronisez vos positions en temps réel, analysez vos performances avec des métriques avancées (Sharpe Ratio, Profit Factor, Drawdown), et maîtrisez votre discipline de trading.
 
-## 📋 Caractéristiques
+## ✨ Caractéristiques
 
+### 🔐 Authentication & Connexion
 - ✅ **OAuth2 cTrader** - Connexion sécurisée avec cTrader Open API
-- ✅ **WebSocket en temps réel** - Positions, trades, balance en live via ProtoOA
-- ✅ **Dashboard complet** - Métriques avancées (Sharpe, Profit Factor, Drawdown, etc.)
-- ✅ **Historique des trades** - Table filtrée avec notes/journal
-- ✅ **Visualisations** - Equity curve, P/L calendar, performance par session
-- ✅ **Gestion des positions** - Modifier SL/TP, trailing stop, break-even
-- ✅ **Objectifs & Discipline** - Suivi des goals avec progression
-- ✅ **Journal entries** - Notes personnelles, analyse psychologique
-- ✅ **Sécurité** - Tokens encryptés, rate-limiting, données privées
+- ✅ **Multi-comptes** - Support des comptes démo ET live
+- ✅ **Token refresh automatique** - Tokens renouvelés avant expiration
+- ✅ **Encryption** - Tokens chiffrés en base de données
 
-## 🛠️ Tech Stack
+### 📊 Dashboard & Métriques
+- ✅ **Win Rate** - Pourcentage de trades gagnants
+- ✅ **Sharpe Ratio** - Rendement ajusté au risque (annualisé)
+- ✅ **Profit Factor** - Ratio gains/pertes
+- ✅ **Expectancy** - Gain moyen par trade
+- ✅ **Max Drawdown** - Pire perte en pourcentage
+- ✅ **Payoff Ratio** - Gain moyen / Perte moyenne
+- ✅ **Streaks** - Séries gagnantes/perdantes
+- ✅ **Courbe d'équité** - Graphique de progression (LineChart Recharts)
+- ✅ **Performance par session** - Asia/London/New York
+- ✅ **Performance par jour** - Statistiques du lundi au dimanche
 
-- **Frontend**: Next.js 14 + React 18 + Tailwind CSS
-- **Backend**: Next.js API Routes + Node.js
-- **Database**: PostgreSQL (Supabase compatible)
-- **Real-time**: WebSocket (Socket.io + cTrader ProtoOA)
-- **Charts**: Recharts
-- **Security**: JWT + Token Encryption
-- **Hosting**: Vercel (Frontend) + Railway/Render (Backend)
+### 📈 Visualisations
+- ✅ Courbe d'équité interactive
+- ✅ Graphiques de performance par session
+- ✅ Analyse par jour de la semaine
+- ✅ 📅 Calendrier P/L (à venir en Phase 7)
 
-## 🚀 Démarrage Rapide
+### 💼 Gestion des Positions
+- ✅ **Positions ouvertes en temps réel** (WebSocket ready)
+- ✅ **Modifier Stop Loss / Take Profit**
+- ✅ **Break-Even** - Un clic pour mettre SL au prix d'entrée
+- ✅ **Fermer position** - Depuis le dashboard
+- ✅ **Auto-refresh** - Actualisation toutes les 5 secondes
 
-### Prérequis
+### 📝 Historique & Journal
+- ✅ **Table des trades** - Historique complet avec filtres
+- ✅ **Filtrage** - Par symbole, résultat (gain/perte)
+- ✅ **Notes par trade** - Analyse personnalisée
+- ✅ **Journal libre** - Notes, lessons learned, analyse psychologique
+- ✅ **Pagination** - Support des listes longues
 
-- Node.js 18+
-- PostgreSQL 12+
-- cTrader Developer Account (gratuit)
+### 🎯 Objectifs & Discipline
+- ✅ **Créer des objectifs** - Win Rate, Drawdown, Profit Factor, etc.
+- ✅ **Progress bars** - Visualisation de la progression
+- ✅ **Tracking automatique** - Mise à jour en temps réel
+- ✅ **Completion flag** - ✅ Quand l'objectif est atteint
 
-### Installation
-
-```bash
-# Clone le repo
-git clone https://github.com/efrandokq/trading-journal-platform.git
-cd trading-journal-platform
-
-# Installe les dépendances
-npm install
-
-# Configure l'environnement
-cp .env.local.example .env.local
-# Édite .env.local avec tes credentials
-
-# Crée la base de données
-npm run db:migrate
-
-# Lance le serveur de développement
-npm run dev
-```
-
-Ouvre [http://localhost:3000](http://localhost:3000) dans ton navigateur.
-
-## 📖 Documentation
-
-- [Setup cTrader OAuth](./docs/CTRADER_OAUTH.md) (à créer)
-- [Architecture WebSocket](./docs/WEBSOCKET.md) (à créer)
-- [Calcul des Métriques](./docs/METRICS.md) (à créer)
-- [API Reference](./docs/API.md) (à créer)
-
-## 🔒 Sécurité
-
-- Tokens OAuth encryptés en base de données
-- Rate-limiting sur l'API cTrader
-- HTTPS obligatoire en production
-- Données utilisateur isolées
-- JWT pour les sessions
-
-## 📝 Roadmap
-
-- [ ] Phase 1: OAuth + Auth Routes
-- [ ] Phase 2: WebSocket Real-time
-- [ ] Phase 3: Dashboard & Metrics
-- [ ] Phase 4: Visualizations
-- [ ] Phase 5: Trade History & Journal
-- [ ] Phase 6: Position Management
-- [ ] Phase 7: Goals Tracker
-- [ ] Phase 8: Deployment
-- [ ] Phase 9: Testing
-- [ ] Phase 10: Monetization (optional)
-
-## 👨‍💻 Contribuer
-
-Les PRs sont bienvenues ! Ouvre une issue d'abord pour discuter des changements majeurs.
-
-## 📄 License
-
-MIT
-
-## 💬 Support
-
-- Issues: [GitHub Issues](https://github.com/efrandokq/trading-journal-platform/issues)
-- Discussions: [GitHub Discussions](https://github.com/efrandokq/trading-journal-platform/discussions)
+### 🔒 Sécurité
+- ✅ JWT pour les sessions
+- ✅ Tokens chiffrés (AES-256-CBC)
+- ✅ HTTPS en production
+- ✅ Rate-limiting ready
+- ✅ Données privées par utilisateur
 
 ---
 
-**Made with 💙 by efrandokq**
+## 🛠️ Tech Stack
+
+| Couche | Technology |
+|--------|------------|
+| **Frontend** | Next.js 14 + React 18 + TypeScript |
+| **Styling** | Tailwind CSS 3 |
+| **Charts** | Recharts 2.10 |
+| **Backend** | Next.js API Routes + Node.js |
+| **Database** | PostgreSQL 12+ |
+| **Real-time** | WebSocket (Socket.io + cTrader ProtoOA) |
+| **Auth** | OAuth2 (cTrader) + JWT |
+| **Security** | Token Encryption (AES-256) |
+| **Hosting** | Vercel (Frontend) + Railway/Render (Backend) |
+
+---
+
+## 🚀 Démarrage Rapide
+
+**⚡ 5 minutes seulement !**
+
+```bash
+# 1. Clone
+git clone https://github.com/efrandokq/trading-journal-platform.git
+cd trading-journal-platform
+
+# 2. Install
+npm install
+
+# 3. Setup .env (voir QUICKSTART.md)
+cp .env.local.example .env.local
+# Éditez avec vos credentials cTrader
+
+# 4. Database
+createctl createdb trading_journal
+npm run db:migrate
+
+# 5. Start
+npm run dev
+# http://localhost:3000
+```
+
+👉 **[QUICKSTART.md](./QUICKSTART.md)** pour les 5 minutes
+👉 **[SETUP.md](./SETUP.md)** pour le guide détaillé
+👉 **[ARCHITECTURE.md](./ARCHITECTURE.md)** pour développeurs
+
+---
+
+## 📚 Documentation
+
+### Pour les Utilisateurs
+- [QUICKSTART.md](./QUICKSTART.md) - Démarrage en 5 minutes
+- [SETUP.md](./SETUP.md) - Installation complète + Troubleshooting
+
+### Pour les Développeurs
+- [ARCHITECTURE.md](./ARCHITECTURE.md) - Architecture système
+- Code comments en TypeScript
+- Schema PostgreSQL documenté
+
+---
+
+## 🎯 État du Projet
+
+### ✅ Complété (Phases 1-5)
+```
+[████████████████████] 50%
+
+✅ Phase 1: OAuth2 + Database
+✅ Phase 2: API Routes + Token Management  
+✅ Phase 3: Metrics Engine + Dashboard
+✅ Phase 4: Trade History + Journal
+✅ Phase 5: Positions Management + Goals
+```
+
+### 🔄 En Développement (Phases 6-10)
+```
+[ ░░░░░░░░░░] 0%
+
+⏳ Phase 6: WebSocket Real-time
+⏳ Phase 7: P/L Heatmap + Charts
+⏳ Phase 8: Docker + Deployment
+⏳ Phase 9: Testing Suite
+⏳ Phase 10: API Docs
+```
+
+---
+
+## 💻 Screenshots (À venir)
+
+- 📊 Dashboard avec 8 métriques
+- 📈 Courbe d'équité interactive
+- 💼 Gestion des positions
+- 📝 Journal de trading
+- 🎯 Suivi des objectifs
+
+---
+
+## 🤝 Contribuer
+
+Les contributions sont bienvenues !
+
+1. Fork le repo
+2. Créez une branche (`git checkout -b feature/amazing`)
+3. Commit vos changes (`git commit -m 'Add amazing feature'`)
+4. Push (`git push origin feature/amazing`)
+5. Ouvrez une Pull Request
+
+---
+
+## 🐛 Issues & Support
+
+- **Issues** : [GitHub Issues](https://github.com/efrandokq/trading-journal-platform/issues)
+- **Discussions** : [GitHub Discussions](https://github.com/efrandokq/trading-journal-platform/discussions)
+- **Email** : efrandokq@gmail.com
+
+---
+
+## 📄 License
+
+MIT License - Libre d'utilisation commerciale et personnelle
+
+---
+
+## 🎓 Ressources Utiles
+
+- [cTrader Open API](https://www.spotware.com/open-api/)
+- [Next.js Docs](https://nextjs.org/docs)
+- [PostgreSQL](https://www.postgresql.org/docs/)
+- [Tailwind CSS](https://tailwindcss.com/docs)
+- [Recharts](https://recharts.org/)
+
+---
+
+**Made with ❤️ by efrandokq**
+
+**Dernière mise à jour** : 2026-08-01 | **Version** : 0.5.0 (Beta)

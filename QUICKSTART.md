@@ -1,4 +1,4 @@
-# 🎯 Quick Start - 5 minutes
+# ⚡ Quick Start - 5 minutes
 
 ## 1. Prerequisites Check ✅
 
@@ -27,17 +27,30 @@ openssl rand -base64 32
 
 ## 4. Setup `.env.local` ⚙️
 
-```env
+```bash
 # Copy from .env.local.example
 cp .env.local.example .env.local
-
-# Then edit with:
-# 1. Your cTrader client_id / secret
-# 2. PostgreSQL credentials
-# 3. Generated keys above
 ```
 
-## 5. Database Setup 🗄️
+**Then edit with:**
+```env
+# From cTrader Dev Portal
+CTRADER_CLIENT_ID=your_client_id
+CTRADER_CLIENT_SECRET=your_client_secret
+
+# PostgreSQL
+DATABASE_HOST=localhost
+DATABASE_PORT=5432
+DATABASE_USER=postgres
+DATABASE_PASSWORD=your_password
+DATABASE_NAME=trading_journal
+
+# Generated keys above
+NEXTAUTH_SECRET=<paste_first_key_here>
+ENCRYPTION_KEY=<paste_second_key_here>
+```
+
+## 5. Database Setup 📝
 
 ```bash
 # Create database
@@ -56,10 +69,21 @@ npm run dev
 
 ## 7. Login with cTrader 🔐
 
-1. Click "Se connecter avec cTrader"
-2. Authorize the app
-3. You're in! 🎉
+1. Click **"Se connecter avec cTrader"**
+2. Log in with your cTrader account
+3. Authorize the app
+4. You're in! 🎉
 
 ---
 
-**🆘 Stuck?** See [SETUP.md](./SETUP.md) for detailed troubleshooting
+### ✨ Next Steps
+
+- 📊 Explore the Dashboard
+- 💼 Check your open positions
+- 📈 View trade history
+- 🎯 Create trading goals
+- 📝 Write journal entries
+
+---
+
+**🆘 Stuck?** → See [SETUP.md](./SETUP.md) for detailed troubleshooting
